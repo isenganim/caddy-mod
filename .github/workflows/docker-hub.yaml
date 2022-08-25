@@ -19,6 +19,9 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       
+      - name: Docker buildx
+        uses: docker/setup-buildx-action@v2
+      
       - name: Build and push Docker images
         id: build-and-push-latest
         uses: docker/build-push-action@v3.1.1
