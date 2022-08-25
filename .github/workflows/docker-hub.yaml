@@ -26,5 +26,6 @@ jobs:
         with:
           context: .
           push: true
+          platforms: linux/amd64,linux/arm64
           tags: isenganime/caddy-mod:latest
           labels: ${{ steps.meta.outputs.label }}
