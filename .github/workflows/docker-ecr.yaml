@@ -26,8 +26,6 @@ jobs:
         uses: aws-actions/amazon-ecr-login@v1
         with:
           registries: public.ecr.aws/z7n3e9v0/caddy-mod
-          registry-type: public
-
 
       - name: Setup qemu
         uses: docker/setup-qemu-action@v2
