@@ -25,6 +25,7 @@ jobs:
         id: login-aws-ecr
         uses: aws-actions/amazon-ecr-login@v1
         with:
+          repository: caddy-mod
           registry-type: public
 
 
