@@ -9,7 +9,8 @@ RUN xcaddy build \
     --with github.com/mholt/caddy-webdav \
     --with github.com/kirsch33/realip \
     --with github.com/greenpau/caddy-security \
-    --with github.com/porech/caddy-maxmind-geolocation
+    --with github.com/porech/caddy-maxmind-geolocation \
+    --with github.com/mholt/caddy-l4
 
 FROM caddy:2.6.2
 
