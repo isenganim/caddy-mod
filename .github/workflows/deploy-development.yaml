@@ -1,0 +1,14 @@
+name: Build and Publish Development
+
+on:
+  push:
+    branches:
+      - 'update-version'
+
+jobs:
+  deploy:
+    name: Build and Deploy
+    runs-on: self-hosted
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v4
