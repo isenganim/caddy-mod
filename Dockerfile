@@ -1,4 +1,4 @@
-FROM caddy:2.7.5-builder-alpine AS builder
+FROM caddy:2.8.4-builder-alpine AS builder
 
 RUN xcaddy build \
     --with github.com/ueffel/caddy-brotli \
@@ -8,8 +8,10 @@ RUN xcaddy build \
     --with github.com/mholt/caddy-ratelimit \
     --with github.com/mholt/caddy-webdav \
     --with github.com/greenpau/caddy-security \
-    --with github.com/porech/caddy-maxmind-geolocation
+    --with github.com/porech/caddy-maxmind-geolocation \
+    --with github.com/caddyserver/nginx-adapter \
+    --with github.com/dunglas/vulcain/caddy
 
-FROM caddy:2.7.5
+FROM caddy:2.8.4
 
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
