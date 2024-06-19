@@ -10,7 +10,8 @@ RUN xcaddy build \
     --with github.com/greenpau/caddy-security \
     --with github.com/porech/caddy-maxmind-geolocation \
     --with github.com/caddyserver/nginx-adapter \
-    --with github.com/dunglas/vulcain/caddy
+    --with github.com/dunglas/vulcain/caddy \
+    --with github.com/caddyserver/cache-handler
 
 FROM caddy:2.8.4
 
